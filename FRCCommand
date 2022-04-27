@@ -1,0 +1,23 @@
+import java.lang.Math;
+
+public interface FRCCommand {
+	public void init();
+	public void execute();
+	public boolean isFinished();
+	public void end(boolean interrupted);
+	
+}	public static void main(String[] args) { 							
+	UseDrivetrain myCommand = new UseDrivetrain(() -> { 	return 			
+		Math.random();	});
+
+while(!myCommand.isFinished()){myCommand.execute();}
+	myCommand.end(false);
+
+	static void UseDrivetrain run = new UseDrivetrain(public Double power) {
+			this.power = Math.random();
+	}
+	
+	Shootball shoot = new ShootBall(public int spin) {
+			this.spin = spin;
+		}
+	}
