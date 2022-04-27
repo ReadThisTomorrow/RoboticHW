@@ -1,0 +1,21 @@
+public class ShootBall implements FRCCommand {
+	public Double spin;
+	public Gamepad gamepad;
+	public boolean hasBall;
+
+	public static void Shootball(Double spin) {
+		public void init() {
+		this.gamepad = new Gamepad();
+		}
+		}
+	public void execute() {
+		if (hasBall) {
+			this.hasBall = this.gamepad.X ? 1 : 0;
+		} else {
+			this.hasBall = 0;
+		}
+	}
+	public void isFinished() {
+		  this.hasBall = isFinished();
+	}
+}
