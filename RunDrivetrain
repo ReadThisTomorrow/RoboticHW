@@ -1,0 +1,16 @@
+public class UseDrivetrain implements FRCCommand {
+	public Double motorPower;
+	public boolean runMotor;
+	public Gamepad gamepad;
+
+	public void init() {
+		this.gamepad = new Gamepad();
+		}
+	public void execute() {
+		if (runMotor) {
+			this.motorPower = this.gamepad.A ? 1 : 0;
+		} else {
+			this.motorPower = 0;
+		}
+	}
+}
