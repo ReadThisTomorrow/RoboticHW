@@ -1,0 +1,9 @@
+public class Gamepad {
+    public boolean A;
+    public boolean X;
+
+    public Gamepad(){
+        this.A = false;
+        this.X = false;
+    }
+}
