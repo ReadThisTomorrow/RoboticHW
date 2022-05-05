@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+class Main {
+  public static void main(String[] args) {
+		Scanner inPut = new Scanner(System.in);
+    System.out.print("a: ");
+		double a = inPut.nextInt();
+		System.out.print("b: " );
+		double b = inPut.nextInt();
+		System.out.print("c: ");
+		double c = inPut.nextInt();
+		double root1;
+		double root2;
+		double determinant = (b * b) - (4 * a * c);
+		if (determinant > 0) {
+			root1 = (-b + Math.sqrt(determinant)) / (2 * a);
+			root2 = (-b - Math.sqrt(determinant)) / (2 * a);
+			System.out.println("Root 1: " + root1 + " and Root 2: " + root2);
+			} else if (determinant == 0) {
+			root1 = -b / (2 * a);
+			System.out.println("Double Root: " + root1);
+			} else {
+			System.out.println("Better Luck Next Time!");
+			}
+
+		System.out.print("n-th of Fibonacci: ");
+		int n = inPut.nextInt();
+		int f1 = 0;
+		int f2 = 1;
+		int fibonacci;
+		while (n > 0) {
+			fibonacci = f1 + f2;
+			System.out.println(fibonacci);
+			if (f2 > f1) {
+				f1 = fibonacci;
+			} else {
+				f2 = fibonacci;
+			}
+			n = n - 1;
+		}
+		
+		System.out.print("n!: ");
+		int f = inPut.nextInt();
+		int fac = 1;
+		do {
+			fac = fac * f;
+			f = f - 1;
+		} while (f > 0);
+		System.out.println(fac);
+	}
+}	
